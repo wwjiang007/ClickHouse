@@ -65,7 +65,7 @@ private:
 
     std::atomic<Int64> rss{0};
 
-    Int64 profiler_step = 0;
+    std::atomic<Int64> profiler_step = 0;
 
     /// To test exception safety of calling code, memory tracker throws an exception on each memory allocation with specified probability.
     std::atomic<double> fault_probability = 0;
